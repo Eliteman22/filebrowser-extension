@@ -1,0 +1,11 @@
+.cache
+.conda
+.config
+.emacs
+.ipynb_checkpoints
+.ipython
+.jupyter
+.local
+.npm
+.bash_history
+.yarnrc
