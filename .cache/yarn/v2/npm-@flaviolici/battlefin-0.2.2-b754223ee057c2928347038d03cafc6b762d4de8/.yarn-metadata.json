@@ -1,0 +1,61 @@
+{
+  "manifest": {
+    "name": "@flaviolici/battlefin",
+    "version": "0.2.2",
+    "description": "A JupyterLab extension.",
+    "keywords": [
+      "jupyter",
+      "jupyterlab",
+      "jupyterlab-extension"
+    ],
+    "homepage": "https://github.com/my_name/myextension",
+    "bugs": {
+      "url": "https://github.com/my_name/myextension/issues"
+    },
+    "private": false,
+    "license": "BSD-3-Clause",
+    "author": {
+      "name": "Flavio Lici"
+    },
+    "files": [
+      "lib/**/*.{d.ts,eot,gif,html,jpg,js,js.map,json,png,svg,woff2,ttf}",
+      "style/**/*.{css,eot,gif,html,jpg,json,png,svg,woff2,ttf}"
+    ],
+    "main": "lib/index.js",
+    "types": "lib/index.d.ts",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/my_name/myextension.git"
+    },
+    "scripts": {
+      "build": "tsc",
+      "clean": "rimraf lib",
+      "prepare": "npm run clean && npm run build",
+      "watch": "tsc -w"
+    },
+    "dependencies": {
+      "@jupyterlab/application": "^0.19.1"
+    },
+    "devDependencies": {
+      "rimraf": "^2.6.1",
+      "typescript": "~3.1.1"
+    },
+    "jupyterlab": {
+      "extension": true
+    },
+    "_registry": "npm",
+    "_loc": "/home/jovyan/.cache/yarn/v2/.tmp/1025ca189d1050e17e89edd13f69ad96/package.json",
+    "readmeFilename": "README.md",
+    "readme": "# @flaviolici/battlefin\n\nA JupyterLab extension.\n\n\n## Prerequisites\n\n* JupyterLab\n\n## Installation\n\n```bash\njupyter labextension install @flaviolici/battlefin\n```\n\n## Development\n\nFor a development install (requires npm version 4 or later), do the following in the repository directory:\n\n```bash\nnpm install\nnpm run build\njupyter labextension link .\n```\n\nTo rebuild the package and the JupyterLab app:\n\n```bash\nnpm run build\njupyter lab build\n```\n\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "type": "copy",
+    "resolved": "file:../extensions/flaviolici-battlefin-0.2.2.tgz#b754223ee057c2928347038d03cafc6b762d4de8",
+    "hash": "b754223ee057c2928347038d03cafc6b762d4de8",
+    "registry": "npm",
+    "reference": "/home/jovyan/.cache/yarn/v2/.tmp/1025ca189d1050e17e89edd13f69ad96"
+  },
+  "registry": "npm",
+  "hash": "b754223ee057c2928347038d03cafc6b762d4de8"
+}

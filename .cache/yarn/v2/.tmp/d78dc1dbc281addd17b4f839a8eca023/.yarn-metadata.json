@@ -1,0 +1,50 @@
+{
+  "manifest": {
+    "private": false,
+    "name": "@flaviolici/filebrowser-extension",
+    "version": "4.0.1",
+    "description": "A JupyterLab extension.",
+    "author": {
+      "name": "Flavio Lici"
+    },
+    "main": "lib/index.js",
+    "keywords": [
+      "jupyter",
+      "jupyterlab",
+      "jupyterlab-extension"
+    ],
+    "jupyterlab": {
+      "extension": true
+    },
+    "scripts": {},
+    "dependencies": {
+      "@jupyterlab/application": "^0.19.1",
+      "@jupyterlab/apputils": "^0.19.1",
+      "@jupyterlab/coreutils": "^2.2.1",
+      "@jupyterlab/docmanager": "^0.19.1",
+      "@jupyterlab/filebrowser": "^0.19.1",
+      "@jupyterlab/filebrowser-extension": "^0.19.2",
+      "@jupyterlab/launcher": "^0.19.1",
+      "@jupyterlab/services": "^3.2.1",
+      "@phosphor/algorithm": "^1.1.2",
+      "@phosphor/commands": "^1.6.1",
+      "@phosphor/messaging": "^1.2.2",
+      "@phosphor/widgets": "^1.6.0"
+    },
+    "homepage": "https://github.com/jupyterlab/jupyterlab",
+    "devDependencies": {},
+    "_registry": "npm",
+    "_loc": "/home/jovyan/.cache/yarn/v2/.tmp/d78dc1dbc281addd17b4f839a8eca023/package.json",
+    "readmeFilename": "README.md",
+    "readme": "# @flaviolici/filebrowser-extension\n\nA JupyterLab extension.\n\n\n## Prerequisites\n\n* JupyterLab\n\n## Installation\n\nTo install using pip:\n\n```bash\njupyter labextension install @flaviolici/filebrowser-extension\n```\n\n## Development\n\nFor a development install (requires npm version 4 or later), do the following in the repository directory:\n\n```bash\nnpm install\njupyter labextension link .\n```\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "type": "tarball",
+    "reference": "file:../extensions/flaviolici-filebrowser-extension-4.0.1.tgz",
+    "registry": "npm",
+    "hash": ""
+  },
+  "registry": "npm",
+  "hash": "a0e09dd59a45f0e5fec4b6f76c8ac2b1976840c1"
+}

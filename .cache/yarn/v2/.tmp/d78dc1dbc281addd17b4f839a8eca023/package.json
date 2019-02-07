@@ -1,0 +1,33 @@
+{
+  "private": false,
+  "name": "@flaviolici/filebrowser-extension",
+  "version": "4.0.1",
+  "description": "A JupyterLab extension.",
+  "author": "Flavio Lici",
+  "main": "lib/index.js",
+  "keywords": [
+    "jupyter",
+    "jupyterlab",
+    "jupyterlab-extension"
+  ],
+  "jupyterlab": {
+    "extension": true
+  },
+  "scripts": {},
+  "dependencies": {
+    "@jupyterlab/application": "^0.19.1",
+    "@jupyterlab/apputils": "^0.19.1",
+    "@jupyterlab/coreutils": "^2.2.1",
+    "@jupyterlab/docmanager": "^0.19.1",
+    "@jupyterlab/filebrowser": "^0.19.1",
+    "@jupyterlab/filebrowser-extension": "^0.19.2",
+    "@jupyterlab/launcher": "^0.19.1",
+    "@jupyterlab/services": "^3.2.1",
+    "@phosphor/algorithm": "^1.1.2",
+    "@phosphor/commands": "^1.6.1",
+    "@phosphor/messaging": "^1.2.2",
+    "@phosphor/widgets": "^1.6.0"
+  },
+  "homepage": "https://github.com/jupyterlab/jupyterlab",
+  "devDependencies": {}
+}

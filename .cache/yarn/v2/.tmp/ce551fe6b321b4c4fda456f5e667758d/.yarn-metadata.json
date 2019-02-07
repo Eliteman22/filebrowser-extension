@@ -1,0 +1,69 @@
+{
+  "manifest": {
+    "name": "@jupyterlab/filebrowser-extension",
+    "version": "0.19.2",
+    "description": "JupyterLab - Filebrowser Widget Extension",
+    "homepage": "https://github.com/jupyterlab/jupyterlab",
+    "bugs": {
+      "url": "https://github.com/jupyterlab/jupyterlab/issues"
+    },
+    "license": "BSD-3-Clause",
+    "author": {
+      "name": "Project Jupyter"
+    },
+    "files": [
+      "lib/*.d.ts",
+      "lib/*.js.map",
+      "lib/*.js"
+    ],
+    "main": "lib/index.js",
+    "types": "lib/index.d.ts",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/jupyterlab/jupyterlab.git"
+    },
+    "scripts": {
+      "build": "tsc",
+      "clean": "rimraf lib",
+      "prepare": "npm run clean && npm run build",
+      "watch": "tsc -w"
+    },
+    "dependencies": {
+      "@jupyterlab/application": "^0.19.1",
+      "@jupyterlab/apputils": "^0.19.1",
+      "@jupyterlab/coreutils": "^2.2.1",
+      "@jupyterlab/docmanager": "^0.19.1",
+      "@jupyterlab/filebrowser": "^0.19.3",
+      "@jupyterlab/launcher": "^0.19.1",
+      "@jupyterlab/services": "^3.2.1",
+      "@phosphor/algorithm": "^1.1.2",
+      "@phosphor/commands": "^1.6.1",
+      "@phosphor/messaging": "^1.2.2",
+      "@phosphor/widgets": "^1.6.0"
+    },
+    "devDependencies": {
+      "rimraf": "~2.6.2",
+      "typedoc": "~0.12.0",
+      "typescript": "~3.1.1"
+    },
+    "publishConfig": {
+      "access": "public"
+    },
+    "jupyterlab": {
+      "extension": true
+    },
+    "_registry": "npm",
+    "_loc": "/home/jovyan/.cache/yarn/v2/.tmp/ce551fe6b321b4c4fda456f5e667758d/package.json",
+    "readmeFilename": "README.md",
+    "readme": "# @flaviolici/battlefin\n\nA JupyterLab extension.\n\n\n## Prerequisites\n\n* JupyterLab\n\n## Installation\n\n```bash\njupyter labextension install @flaviolici/battlefin\n```\n\n## Development\n\nFor a development install (requires npm version 4 or later), do the following in the repository directory:\n\n```bash\nnpm install\nnpm run build\njupyter labextension link .\n```\n\nTo rebuild the package and the JupyterLab app:\n\n```bash\nnpm run build\njupyter lab build\n```\n\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "type": "tarball",
+    "reference": "file:../extensions/jupyterlab-filebrowser-extension-0.19.2-fd72c49f78b10539259b3a0713ac2265bfc049cc.tgz",
+    "registry": "npm",
+    "hash": ""
+  },
+  "registry": "npm",
+  "hash": "cf8a3c205537bf7743413a5740f52444b0334246"
+}

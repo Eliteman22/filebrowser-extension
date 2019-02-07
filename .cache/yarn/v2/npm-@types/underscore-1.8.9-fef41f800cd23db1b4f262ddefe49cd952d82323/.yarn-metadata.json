@@ -1,0 +1,55 @@
+{
+  "manifest": {
+    "name": "@types/underscore",
+    "version": "1.8.9",
+    "description": "TypeScript definitions for Underscore",
+    "license": "MIT",
+    "contributors": [
+      {
+        "name": "Boris Yankov",
+        "url": "https://github.com/borisyankov"
+      },
+      {
+        "name": "Josh Baldwin",
+        "url": "https://github.com/jbaldwin"
+      },
+      {
+        "name": "Christopher Currens",
+        "url": "https://github.com/ccurrens"
+      },
+      {
+        "name": "Cassey Lottman",
+        "url": "https://github.com/clottman"
+      },
+      {
+        "name": "Ard Timmerman",
+        "url": "https://github.com/confususs"
+      }
+    ],
+    "main": "",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git"
+    },
+    "scripts": {},
+    "dependencies": {},
+    "typesPublisherContentHash": "9e3dd31bd3991703a4b98b69256531a42d110f7deb57b163aeefe1124ee3930a",
+    "typeScriptVersion": "2.0",
+    "_registry": "npm",
+    "_loc": "/home/jovyan/.cache/yarn/v2/npm-@types/underscore-1.8.9-fef41f800cd23db1b4f262ddefe49cd952d82323/package.json",
+    "readmeFilename": "README.md",
+    "readme": "# Installation\n> `npm install --save @types/underscore`\n\n# Summary\nThis package contains type definitions for Underscore (http://underscorejs.org/).\n\n# Details\nFiles were exported from https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/underscore\n\nAdditional Details\n * Last updated: Wed, 15 Aug 2018 20:42:04 GMT\n * Dependencies: none\n * Global values: _\n\n# Credits\nThese definitions were written by Boris Yankov <https://github.com/borisyankov>, Josh Baldwin <https://github.com/jbaldwin>, Christopher Currens <https://github.com/ccurrens>, Cassey Lottman <https://github.com/clottman>, Ard Timmerman <https://github.com/confususs>.\n",
+    "licenseText": "    MIT License\n\n    Copyright (c) Microsoft Corporation. All rights reserved.\n\n    Permission is hereby granted, free of charge, to any person obtaining a copy\n    of this software and associated documentation files (the \"Software\"), to deal\n    in the Software without restriction, including without limitation the rights\n    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n    copies of the Software, and to permit persons to whom the Software is\n    furnished to do so, subject to the following conditions:\n\n    The above copyright notice and this permission notice shall be included in all\n    copies or substantial portions of the Software.\n\n    THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\n    SOFTWARE\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/@types/underscore/-/underscore-1.8.9.tgz#fef41f800cd23db1b4f262ddefe49cd952d82323",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/@types/underscore/-/underscore-1.8.9.tgz",
+    "hash": "fef41f800cd23db1b4f262ddefe49cd952d82323",
+    "registry": "npm",
+    "packageName": "@types/underscore"
+  },
+  "registry": "npm",
+  "hash": "fef41f800cd23db1b4f262ddefe49cd952d82323"
+}

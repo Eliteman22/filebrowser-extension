@@ -1,0 +1,19 @@
+{
+  "private": false,
+  "name": "@flaviolici/sandbox",
+  "version": "0.0.1",
+  "description": "A JupyterLab extension.",
+  "author": "Flavio Lici",
+  "main": "lib/plugin.js",
+  "keywords": [
+    "jupyter",
+    "jupyterlab",
+    "jupyterlab-extension"
+  ],
+  "jupyterlab": {
+    "extension": true
+  },
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {}
+}

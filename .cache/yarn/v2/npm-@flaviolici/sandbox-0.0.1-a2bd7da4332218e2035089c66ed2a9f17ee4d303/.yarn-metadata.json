@@ -1,0 +1,37 @@
+{
+  "manifest": {
+    "private": false,
+    "name": "@flaviolici/sandbox",
+    "version": "0.0.1",
+    "description": "A JupyterLab extension.",
+    "author": {
+      "name": "Flavio Lici"
+    },
+    "main": "lib/plugin.js",
+    "keywords": [
+      "jupyter",
+      "jupyterlab",
+      "jupyterlab-extension"
+    ],
+    "jupyterlab": {
+      "extension": true
+    },
+    "scripts": {},
+    "dependencies": {},
+    "devDependencies": {},
+    "_registry": "npm",
+    "_loc": "/home/jovyan/.cache/yarn/v2/.tmp/72eb351bba1dae6dd386ccaf063d9b76/package.json",
+    "readmeFilename": "README.md",
+    "readme": "# @flaviolici/sandbox\n\nA JupyterLab extension.\n\n\n## Prerequisites\n\n* JupyterLab\n\n## Installation\n\nTo install using pip:\n\n```bash\njupyter labextension install @flaviolici/sandbox\n```\n\n## Development\n\nFor a development install (requires npm version 4 or later), do the following in the repository directory:\n\n```bash\nnpm install\njupyter labextension link .\n```\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "type": "copy",
+    "resolved": "file:../extensions/flaviolici-sandbox-0.0.1.tgz#a2bd7da4332218e2035089c66ed2a9f17ee4d303",
+    "hash": "a2bd7da4332218e2035089c66ed2a9f17ee4d303",
+    "registry": "npm",
+    "reference": "/home/jovyan/.cache/yarn/v2/.tmp/72eb351bba1dae6dd386ccaf063d9b76"
+  },
+  "registry": "npm",
+  "hash": "a2bd7da4332218e2035089c66ed2a9f17ee4d303"
+}

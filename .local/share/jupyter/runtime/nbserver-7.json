@@ -1,0 +1,11 @@
+{
+  "base_url": "/user/demo-tournament@battlefin.com/",
+  "hostname": "0.0.0.0",
+  "notebook_dir": "/home/jovyan",
+  "password": false,
+  "pid": 7,
+  "port": 8888,
+  "secure": false,
+  "token": "08af96ee58a240d6bdcd447381fa5432",
+  "url": "http://0.0.0.0:8888/user/demo-tournament@battlefin.com/"
+}

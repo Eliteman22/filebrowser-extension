@@ -1,0 +1,41 @@
+{
+    "name": "@types/backbone",
+    "version": "1.3.45",
+    "description": "TypeScript definitions for Backbone",
+    "license": "MIT",
+    "contributors": [
+        {
+            "name": "Boris Yankov",
+            "url": "https://github.com/borisyankov",
+            "githubUsername": "borisyankov"
+        },
+        {
+            "name": "Natan Vivo",
+            "url": "https://github.com/nvivo",
+            "githubUsername": "nvivo"
+        },
+        {
+            "name": "kenjiru",
+            "url": "https://github.com/kenjiru",
+            "githubUsername": "kenjiru"
+        },
+        {
+            "name": "jjoekoullas",
+            "url": "https://github.com/jjoekoullas",
+            "githubUsername": "jjoekoullas"
+        }
+    ],
+    "main": "",
+    "types": "index",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git"
+    },
+    "scripts": {},
+    "dependencies": {
+        "@types/jquery": "*",
+        "@types/underscore": "*"
+    },
+    "typesPublisherContentHash": "9e691c96b12acf1f89fa5e8136b262c31527763bc9b87cd372a138c743085b54",
+    "typeScriptVersion": "2.3"
+}

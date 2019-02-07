@@ -1,0 +1,67 @@
+{
+  "manifest": {
+    "name": "vega-expression",
+    "version": "2.4.0",
+    "description": "Vega expression parser and code generator.",
+    "keywords": [
+      "vega",
+      "expression",
+      "parser",
+      "codegen"
+    ],
+    "author": {
+      "name": "Jeffrey Heer",
+      "url": "http://idl.cs.washington.edu"
+    },
+    "contributors": [
+      {
+        "name": "Ryan Russell",
+        "url": "https://github.com/RussellSprouts"
+      },
+      {
+        "name": "Arvind Satyanarayan",
+        "url": "http://arvindsatya.com"
+      }
+    ],
+    "license": "BSD-3-Clause",
+    "main": "build/vega-expression.js",
+    "module": "index.js",
+    "jsnext:main": "index.js",
+    "repository": {
+      "type": "git",
+      "url": "http://github.com/vega/vega-expression.git"
+    },
+    "scripts": {
+      "build": "npm run test && uglifyjs build/vega-expression.js -c -m -o build/vega-expression.min.js",
+      "pretest": "rm -rf build && mkdir build && rollup -f umd -g vega-util:vega -n vega -o build/vega-expression.js -- index.js",
+      "test": "tape 'test/**/*-test.js' && eslint index.js src test",
+      "prepublishOnly": "npm run build",
+      "postpublish": "git push && git push --tags && zip -j build/vega-expression.zip -- LICENSE README.md build/vega-expression.js build/vega-expression.min.js"
+    },
+    "dependencies": {
+      "vega-util": "^1.7.0"
+    },
+    "devDependencies": {
+      "eslint": "5",
+      "rollup": "0.66.6",
+      "tape": "4",
+      "uglify-js": "3"
+    },
+    "_registry": "npm",
+    "_loc": "/home/jovyan/.cache/yarn/v2/npm-vega-expression-2.4.0-02eb789623bf24c959b7b8756bf2cacb10bd54a6/package.json",
+    "readmeFilename": "README.md",
+    "readme": "# vega-expression\n\n[Vega](http://github.com/vega/vega) expression parser and code generator.\n\nParses a [limited subset](https://vega.github.io/vega/docs/expressions/) of\nJavaScript expressions into an abstract syntax tree, and provides code\ngeneration utilities for generating `eval`'able output code. The parser\nrecognizes basic JavaScript expressions, but does not allow assignment\noperators, `new` expressions, or control flow statements (`for`, `while`,\n`switch`, etc). The configurable code generator further limits the set of\nallowable function invocations and variable names. The goal is to provide\nsimple, expressive and security-conscious expression evaluation.\n\n## API Reference\n\n<a name=\"parse\" href=\"#parse\">#</a>\n<b>parse</b>(<i>expression</i>)\n[<>](https://github.com/vega/vega-expression/blob/master/src/parser.js \"Source\")\n\nParse the JavaScript *expression* string and return the resulting abstract\nsyntax tree in the [ESTree format](https://github.com/estree/estree). The\nparser is a stripped-down version of the [Esprima](http://esprima.org/) parser.\n\n<a name=\"codegen\" href=\"#codegen\">#</a>\n<b>codegen</b>(<i>options</i>)\n[<>](https://github.com/vega/vega-expression/blob/master/src/codegen.js \"Source\")\n\nCreate a new output code generator configured according to the provided\noptions. The resulting generator function accepts a parsed AST as input and\nreturns `eval`'able JavaScript code as output. The output is an object hash\nwith the properties `code` (the generated code as a string), `fields` (a hash\nof all properties referenced within the _fieldvar_ scope), and `globals` (a\nhash of all properties referenced outside a provided whitelist).\n\nThe supported _options_ include:\n\n- *constants*: A hash of allowed top-level constant values. This object maps\nfrom constant names to constant values. The constant values are strings that\nwill be injected as-is into generated code. If this option is not specified,\nthe [constants](#constants) object is used by default.\n\n- *functions*: A function that is given an AST visitor instance as input and\nreturns an object of allowed functions. The resulting object maps from\nfunction names to function values. The values may either be strings (which will\nbe injected as-is into generated code and subsequently appended with arguments)\nor functions (which take an array of argument AST nodes as input and return\ngenerated code to inject). If this option is not specified, the\n[functions](#functions) method is used by default.\n\n- *blacklist*: An array of variable names that may **not** be referenced within\nthe expression scope. These may correspond to disallowed global variables.\n\n- *whitelist*: An array of variable names that may be referenced within the\nexpression scope. These typically correspond to function parameter names for\nthe expression. Variable names not included in the white list will be collected\nas global variables (see *globalvar* below).\n\n- *fieldvar*: The name of the primary data input argument within the\ngenerated expression function. For example, in the function\n`function(d) { return d.x * d.y; }`, the variable `d` serves as the field\nvariable, and `x` and `y` are it's accessed properties. All properties\naccessed under the scope of _fieldvar_ will be tracked by the code generator\nand returned as part of the output. This is necessary to perform dependency\ntracking of referenced data fields.\n\n- *globalvar*: (Required) The name of the variable upon which to lookup global\nvariables. This variable name will be included in the generated code as the\nscope for any global variable references. Alternatively, this property can be\na function that maps from variable names in the source input to generated code\nto write to the output.\n\n<a name=\"constants\" href=\"#constants\">#</a>\n<b>constants</b>(<i>codegen</i>)\n[<>](https://github.com/vega/vega-expression/blob/master/src/constants.js \"Source\")\n\nAn object defining default constant values for the Vega expression language.\nThe object maps from constant identifiers to JavaScript code to defining the\nconstant value (for example, `'PI'` maps to `'Math.PI`').\n\n<a name=\"functions\" href=\"#functions\">#</a>\n<b>functions</b>(<i>codegen</i>)\n[<>](https://github.com/vega/vega-expression/blob/master/src/functions.js \"Source\")\n\nGiven a *codegen* instance (generated by the [codegen](#codegen) method) as\ninput, returns an object defining all valid function names for use within an\nexpression. The resulting object maps from function names to function values.\nThe values may either be strings (which will be injected as-is into generated\ncode and subsequently appended with arguments) or functions (which take an\narray of argument AST nodes as input and return generated code to inject).\n\n<a name=\"ASTNode\" href=\"#ASTNode\">#</a>\n<b>ASTNode</b>(<i>type</i>)\n[<>](https://github.com/vega/vega-expression/blob/master/src/ast.js \"Source\")\n\nConstructor for a node in an expression abstract syntax tree (AST). Accepts\na *type* string as input, which then become the `type` property of the\nresulting node. AST nodes also support a `visit` method which takes a\nvisitor function as input in order to traverse the AST for static analysis.\n",
+    "licenseText": "Copyright (c) 2015-2016, University of Washington Interactive Data Lab\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n\n1. Redistributions of source code must retain the above copyright notice, this\n   list of conditions and the following disclaimer.\n\n2. Redistributions in binary form must reproduce the above copyright notice,\n   this list of conditions and the following disclaimer in the documentation\n   and/or other materials provided with the distribution.\n\n3. Neither the name of the copyright holder nor the names of its contributors\n  may be used to endorse or promote products derived from this software\n  without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"\nAND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\nIMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\nDISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE\nFOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\nDAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR\nSERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER\nCAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,\nOR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\nOF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/vega-expression/-/vega-expression-2.4.0.tgz#02eb789623bf24c959b7b8756bf2cacb10bd54a6",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/vega-expression/-/vega-expression-2.4.0.tgz",
+    "hash": "02eb789623bf24c959b7b8756bf2cacb10bd54a6",
+    "registry": "npm",
+    "packageName": "vega-expression"
+  },
+  "registry": "npm",
+  "hash": "02eb789623bf24c959b7b8756bf2cacb10bd54a6"
+}

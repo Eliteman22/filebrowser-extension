@@ -1,0 +1,59 @@
+{
+  "manifest": {
+    "name": "@types/shelljs",
+    "version": "0.8.2",
+    "description": "TypeScript definitions for ShellJS",
+    "license": "MIT",
+    "contributors": [
+      {
+        "name": "Niklas Mollenhauer",
+        "url": "https://github.com/nikeee"
+      },
+      {
+        "name": "Vojtech Jasny",
+        "url": "https://github.com/voy"
+      },
+      {
+        "name": "George Kalpakas",
+        "url": "https://github.com/gkalpak"
+      },
+      {
+        "name": "Paul Huynh",
+        "url": "https://github.com/pheromonez"
+      },
+      {
+        "name": "Alexander Futász",
+        "url": "https://github.com/aldafu"
+      }
+    ],
+    "main": "",
+    "types": "index",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git"
+    },
+    "scripts": {},
+    "dependencies": {
+      "@types/glob": "*",
+      "@types/node": "*"
+    },
+    "typesPublisherContentHash": "6b8156ae7e76a2c94bd5e85637d3ae902e240f9895860c52086b16ab769d903b",
+    "typeScriptVersion": "2.0",
+    "_registry": "npm",
+    "_loc": "/home/jovyan/.cache/yarn/v2/npm-@types/shelljs-0.8.2-6fa9314497ec7b61c28a21485bfa915e64894751/package.json",
+    "readmeFilename": "README.md",
+    "readme": "# Installation\n> `npm install --save @types/shelljs`\n\n# Summary\nThis package contains type definitions for ShellJS ( http://shelljs.org ).\n\n# Details\nFiles were exported from https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/shelljs\n\nAdditional Details\n * Last updated: Fri, 25 Jan 2019 17:58:13 GMT\n * Dependencies: @types/glob, @types/node\n * Global values: none\n\n# Credits\nThese definitions were written by Niklas Mollenhauer <https://github.com/nikeee>, Vojtech Jasny <https://github.com/voy>, George Kalpakas <https://github.com/gkalpak>, Paul Huynh <https://github.com/pheromonez>, Alexander Futász <https://github.com/aldafu>.\n",
+    "licenseText": "    MIT License\n\n    Copyright (c) Microsoft Corporation. All rights reserved.\n\n    Permission is hereby granted, free of charge, to any person obtaining a copy\n    of this software and associated documentation files (the \"Software\"), to deal\n    in the Software without restriction, including without limitation the rights\n    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n    copies of the Software, and to permit persons to whom the Software is\n    furnished to do so, subject to the following conditions:\n\n    The above copyright notice and this permission notice shall be included in all\n    copies or substantial portions of the Software.\n\n    THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\n    SOFTWARE\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/@types/shelljs/-/shelljs-0.8.2.tgz#6fa9314497ec7b61c28a21485bfa915e64894751",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/@types/shelljs/-/shelljs-0.8.2.tgz",
+    "hash": "6fa9314497ec7b61c28a21485bfa915e64894751",
+    "registry": "npm",
+    "packageName": "@types/shelljs"
+  },
+  "registry": "npm",
+  "hash": "6fa9314497ec7b61c28a21485bfa915e64894751"
+}

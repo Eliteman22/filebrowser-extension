@@ -1,0 +1,38 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/opt/conda/bin/node',
+1 verbose cli   '/opt/conda/bin/npm',
+1 verbose cli   'pack',
+1 verbose cli   '/home/jovyan/packages/flaviolici' ]
+2 info using npm@6.5.0
+3 info using node@v11.9.0
+4 verbose npm-session 8549d55204834a7d
+5 silly pacote directory manifest for undefined@file:/home/jovyan/packages/flaviolici fetched in 12ms
+6 info lifecycle @jupyterlab/filebrowser-extension@0.19.2~prepublish: @jupyterlab/filebrowser-extension@0.19.2
+7 info lifecycle @jupyterlab/filebrowser-extension@0.19.2~prepare: @jupyterlab/filebrowser-extension@0.19.2
+8 verbose lifecycle @jupyterlab/filebrowser-extension@0.19.2~prepare: unsafe-perm in lifecycle true
+9 verbose lifecycle @jupyterlab/filebrowser-extension@0.19.2~prepare: PATH: /opt/conda/lib/node_modules/npm/node_modules/npm-lifecycle/node-gyp-bin:/home/jovyan/packages/flaviolici/node_modules/.bin:/opt/conda/bin:/opt/conda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+10 verbose lifecycle @jupyterlab/filebrowser-extension@0.19.2~prepare: CWD: /home/jovyan/packages/flaviolici
+11 silly lifecycle @jupyterlab/filebrowser-extension@0.19.2~prepare: Args: [ '-c', 'npm run clean && npm run build' ]
+12 silly lifecycle @jupyterlab/filebrowser-extension@0.19.2~prepare: Returned: code: 1  signal: null
+13 info lifecycle @jupyterlab/filebrowser-extension@0.19.2~prepare: Failed to exec prepare script
+14 verbose stack Error: @jupyterlab/filebrowser-extension@0.19.2 prepare: `npm run clean && npm run build`
+14 verbose stack Exit status 1
+14 verbose stack     at EventEmitter.<anonymous> (/opt/conda/lib/node_modules/npm/node_modules/npm-lifecycle/index.js:301:16)
+14 verbose stack     at EventEmitter.emit (events.js:197:13)
+14 verbose stack     at ChildProcess.<anonymous> (/opt/conda/lib/node_modules/npm/node_modules/npm-lifecycle/lib/spawn.js:55:14)
+14 verbose stack     at ChildProcess.emit (events.js:197:13)
+14 verbose stack     at maybeClose (internal/child_process.js:978:16)
+14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:265:5)
+15 verbose pkgid @jupyterlab/filebrowser-extension@0.19.2
+16 verbose cwd /tmp/tmpp33i64vc
+17 verbose Linux 4.4.148-k8s
+18 verbose argv "/opt/conda/bin/node" "/opt/conda/bin/npm" "pack" "/home/jovyan/packages/flaviolici"
+19 verbose node v11.9.0
+20 verbose npm  v6.5.0
+21 error code ELIFECYCLE
+22 error errno 1
+23 error @jupyterlab/filebrowser-extension@0.19.2 prepare: `npm run clean && npm run build`
+23 error Exit status 1
+24 error Failed at the @jupyterlab/filebrowser-extension@0.19.2 prepare script.
+24 error This is probably not a problem with npm. There is likely additional logging output above.
+25 verbose exit [ 1, true ]

@@ -1,0 +1,43 @@
+{
+  "manifest": {
+    "private": false,
+    "name": "@flaviolici/filebrowser-extension",
+    "version": "0.0.2",
+    "description": "A JupyterLab extension.",
+    "author": {
+      "name": "Flavio Lici"
+    },
+    "main": "lib/plugin.js",
+    "keywords": [
+      "jupyter",
+      "jupyterlab",
+      "jupyterlab-extension"
+    ],
+    "jupyterlab": {
+      "extension": true
+    },
+    "scripts": {},
+    "dependencies": {
+      "@jupyterlab/application": "^0.19.1",
+      "@jupyterlab/apputils": "^0.19.1",
+      "@jupyterlab/docregistry": "^0.19.1",
+      "@jupyterlab/filebrowser-extension": "^0.19.2",
+      "@jupyterlab/notebook": "^0.19.2",
+      "@phosphor/disposable": "^1.1.2"
+    },
+    "devDependencies": {},
+    "_registry": "npm",
+    "_loc": "/home/jovyan/.cache/yarn/v2/.tmp/3694708c1661012b530d09e3ef670a6e/package.json",
+    "readmeFilename": "README.md",
+    "readme": "# @battlefin/filemanager-extension\n\nA JupyterLab extension.\n\n\n## Prerequisites\n\n* JupyterLab\n\n## Installation\n\nTo install using pip:\n\n```bash\njupyter labextension install @battlefin/filemanager-extension\n```\n\n## Development\n\nFor a development install (requires npm version 4 or later), do the following in the repository directory:\n\n```bash\nnpm install\njupyter labextension link .\n```\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "type": "tarball",
+    "reference": "file:../extensions/flaviolici-filebrowser-extension-0.0.2.tgz",
+    "registry": "npm",
+    "hash": ""
+  },
+  "registry": "npm",
+  "hash": "076493da2767df9faf881d1898c59b323546a3a9"
+}
